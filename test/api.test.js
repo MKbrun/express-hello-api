@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../index');
+const { app, server } = require("../index");
 
 describe('API Endpoint Tests', () => {
   it('should return 200 for GET /health', async () => {
@@ -14,3 +14,7 @@ describe('API Endpoint Tests', () => {
     expect(res.text).toEqual("Hello World");
   });
 });
+
+afterAll(() => {
+    server.close();
+  });
