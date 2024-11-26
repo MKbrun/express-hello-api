@@ -4,7 +4,7 @@ const port = 3000;
 
 // Existing /hello route
 app.get('/hello', (req, res) => {
-  res.send('Hello World');
+  res.send('Hello World Test');
 });
 
 // New route for the root path /
