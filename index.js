@@ -9,7 +9,7 @@ app.get('/hello', (req, res) => {
 
 // New route for the root path /
 app.get('/health', (req, res) => {
-  res.send('Ok');
+  res.send('ok');
 });
 
 const server = app.listen(port, () => {
