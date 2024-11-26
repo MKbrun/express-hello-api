@@ -4,14 +4,19 @@ const port = 3000;
 
 // Existing /hello route
 app.get('/hello', (req, res) => {
-  res.send('Hello World Test');
+  res.send('Hello World');
 });
 
 // New route for the root path /
-app.get('/', (req, res) => {
-  res.send('Welcome to the Home Page!');
+app.get('/health', (req, res) => {
+  res.send('ok');
 });
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+module.exports = { 
+  app,
+  server
+};
