@@ -8,10 +8,12 @@ app.get('/hello', (req, res) => {
 });
 
 // New route for the root path /
-app.get('/', (req, res) => {
-  res.send('Welcome to the Home Page!');
+app.get('/health', (req, res) => {
+  res.send('Ok');
 });
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+module.exports = app;
